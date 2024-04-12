@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.view.CreateAccountFragment">
+    tools:context=".presentation.view.TodoListFragment">
 
     <TextView
         android:gravity="center_horizontal|center_vertical"
+        android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="30sp"
-        android:text="Create Account" />
+        android:text="TODO List" />
 
 </FrameLayout>

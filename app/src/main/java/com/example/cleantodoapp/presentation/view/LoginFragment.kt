@@ -5,11 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.example.cleantodoapp.databinding.FragmentLoginBinding
+import com.example.cleantodoapp.presentation.viewmodel.LoginViewModel
 
 class LoginFragment : Fragment() {
 
     private val viewModel: LoginViewModel by viewModels()
+
+    private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {

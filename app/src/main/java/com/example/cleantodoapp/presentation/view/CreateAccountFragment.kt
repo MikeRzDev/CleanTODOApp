@@ -11,16 +11,11 @@ import com.example.cleantodoapp.presentation.viewmodel.CreateAccountViewModel
 
 class CreateAccountFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = CreateAccountFragment()
-    }
-
     private val viewModel: CreateAccountViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Use the ViewModel
     }
 
     override fun onCreateView(

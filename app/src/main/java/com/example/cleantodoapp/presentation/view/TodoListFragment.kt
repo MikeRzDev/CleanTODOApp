@@ -11,16 +11,11 @@ import com.example.cleantodoapp.presentation.viewmodel.TodoListViewModel
 
 class TodoListFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = TodoListFragment()
-    }
-
     private val viewModel: TodoListViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Use the ViewModel
     }
 
     override fun onCreateView(

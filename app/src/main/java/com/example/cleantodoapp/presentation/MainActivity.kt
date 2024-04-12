@@ -1,4 +1,4 @@
-package com.example.cleantodoapp
+package com.example.cleantodoapp.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.cleantodoapp.R
 import com.example.cleantodoapp.databinding.ActivityMainBinding
 import com.example.cleantodoapp.presentation.view.MainViewActivity
 

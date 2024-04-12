@@ -1,17 +1,16 @@
 package com.example.cleantodoapp.presentation.view
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.cleantodoapp.R
-import com.example.cleantodoapp.presentation.viewmodel.LoginViewModel
+import androidx.fragment.app.Fragment
+import com.example.cleantodoapp.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
     private val viewModel: LoginViewModel by viewModels()
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +21,19 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        initViews()
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun initViews() {
+        binding.bLogin.setOnClickListener {
+
+        }
     }
 }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.viewModelScope
 import com.example.cleantodoapp.databinding.FragmentLoginBinding
 import com.example.cleantodoapp.presentation.viewmodel.LoginViewModel
 
@@ -37,7 +38,14 @@ class LoginFragment : Fragment() {
 
     private fun initViews() {
         binding.bLogin.setOnClickListener {
+            viewModel.validateFormAndLogin(
+                binding.etEmail.text.toString(),
+                binding.etPassword.text.toString()
+            )
+        }
 
+        viewModel.passwordErrorLiveData.observe(viewLifecycleOwner) {
+            binding.inputLayoutPassword.error = it
         }
     }
 }
